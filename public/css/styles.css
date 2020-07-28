@@ -1,0 +1,382 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+.container {
+    /*flex*/
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+}
+
+.footer,
+.header {
+    display: flex;
+    justify-content: center;
+    color: lightgray;
+}
+
+footer {
+    padding: 15px;
+}
+
+.header {
+    padding-top: 1em;
+    color: gray;
+    justify-content: space-around;
+}
+
+.title-header {
+    width: 35%;
+    padding: 10px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: lightgray;
+}
+
+.row-2 {
+    /*flex*/
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.row-1 {
+    width: 48%;
+}
+
+.info-user {
+    /*seccion justify-self: center;
+    width: 40%;
+    padding: 10px; 1 de flex*/
+    background-color: white;
+}
+
+
+/*info checkout css*/
+
+.info-user .form .contact .control {
+    /* input custom*/
+    outline: none;
+    width: 100%;
+    border: 1.5px solid gray;
+    border-radius: 10px;
+    padding: 13px;
+    color: #000;
+    font-weight: bolder;
+    padding-left: 35px;
+}
+
+.info-user .form .contact .control:focus {
+    outline: none;
+    border: solid hotpink;
+    color: gray;
+}
+
+
+/* contents css */
+
+.contact {
+    margin-bottom: 1em;
+}
+
+.info-user .form .contact .group {
+    margin-top: 0.4em;
+}
+
+label {
+    font-size: 12px;
+}
+
+.form {
+    color: gray;
+}
+
+
+/* i inside input */
+
+.info-user .form .contact {
+    position: relative;
+}
+
+.info-user .form .contact i {
+    position: absolute;
+    left: 8px;
+    bottom: 11px;
+}
+
+
+/*product css*/
+
+.info-product {
+    /*seccion 2 de flex*/
+    justify-self: center;
+    width: 30%;
+    padding: 10px;
+    background-color: white;
+}
+
+.info-product .card {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    background-color: #e6e6e6;
+    height: 70%;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+
+/*prducts*/
+
+.info-product .card .product {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    width: 100%;
+    margin-bottom: 1px;
+    background-color: transparent;
+    justify-content: center;
+    padding: 10px;
+}
+
+.info-product .card .product .product-img {
+    width: 100%;
+}
+
+.info-product .card .product .description {
+    width: 100%;
+    padding-left: 5px;
+    padding-left: 5px;
+}
+
+.info-product .card .product .description .info .prices {
+    list-style: 0;
+    padding: 0;
+}
+
+.info-product .card .product .description .info .prices li {
+    display: inline;
+    padding-left: 15px;
+}
+
+.info-product .card .product .description .info .prices .forsale {
+    color: orange;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.info-product .card .product .description .info .prices .real {
+    text-decoration: line-through;
+    font-size: 12px;
+}
+
+.info-product .card .product .product-img .imagen {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+}
+
+.info-product .card .product .description .info .controls {
+    text-align: center;
+    list-style: none;
+    padding: 20px 0;
+    border: 1px solid;
+    border-radius: 10px;
+    margin: 10px;
+    width: 60%;
+}
+
+.info-product .card .product .description .info li {
+    display: inline;
+}
+
+.info-product .card .product .description .info .min {
+    cursor: pointer;
+    color: #999999;
+    margin-right: 20px;
+    background-color: lightgrey;
+    padding-left: 6px;
+    padding-right: 3px;
+    border-radius: 2px;
+}
+
+.info-product .card .product .description .info .add {
+    cursor: pointer;
+    color: #999999;
+    margin-left: 20px;
+    background-color: lightgrey;
+    padding-left: 6px;
+    padding-right: 6px;
+    border-radius: 2px;
+}
+
+.info-product .card .product .description .info .qty input {
+    width: 15%;
+    outline: 0;
+    border: none;
+    background-color: transparent;
+    padding: 1px;
+    text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+    .info-user {
+        /*seccion 1 de flex*/
+        justify-self: center;
+        width: 50%;
+        background-color: transparent;
+    }
+    .info-product {
+        /*seccion 2 de flex*/
+        width: 30%;
+        height: auto;
+    }
+    .info-product .card .product .description .info .controls {
+        width: 100%;
+    }
+    .title-header {
+        width: 50%;
+    }
+}
+
+.form-title {
+    color: #000;
+}
+
+
+/*
+    checkboxs
+*/
+
+.container_ {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    padding-top: 4px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.container_ input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    border: solid lightgray;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+}
+
+.container_:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+.container_ input:checked~.checkmark {
+    background-color: hotpink;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container_ input:checked~.checkmark:after {
+    display: block;
+}
+
+
+/* Style the checkmark/indicator */
+
+.container_ .checkmark:after {
+    left: 3px;
+    bottom: 2px;
+    width: 4px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        justify-content: center;
+    }
+    .info-product,
+    .info-user {
+        /*seccion 2 de flex*/
+        width: 100%;
+        height: auto;
+    }
+    .info-product .card {
+        height: auto;
+    }
+    .info-product .card .product .description .info .controls {
+        width: 100%;
+    }
+    .shipping-info,
+    .total-shopping {
+        padding-bottom: 15px;
+    }
+}
+
+.form-title {
+    color: #000;
+}
+
+.info-user .form .buttons {
+    text-align: right;
+}
+
+.info-user .form .buttons button {
+    outline: none;
+    border: 0;
+    padding-right: 2em;
+    padding-left: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border-radius: 10px;
+    color: white;
+    background-color: orange;
+    font-weight: bolder;
+}
+
+.info-user .form .buttons button:active {
+    background-color: hotpink;
+    color: #fff;
+}
+
+.shipping-info,
+.total-shopping {
+    border-top: solid 1px;
+    border-color: gray;
+    margin-left: 15px;
+    width: 80%;
+    display: flex;
+    padding-top: 5px;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
